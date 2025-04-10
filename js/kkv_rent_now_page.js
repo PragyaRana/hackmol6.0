@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Set minimum date to today
+    // Set minimum date 
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('start-date').min = today;
     document.getElementById('end-date').min = today;
 
-    // Load product details
+    // Load product
     const product = JSON.parse(localStorage.getItem('rentProduct'));
     if (product) {
         document.getElementById('product-image').src = product.image;
         document.getElementById('product-name').textContent = product.name;
         document.getElementById('product-description').textContent = product.description;
         
-        // Calculate daily rate (10% of product price)
+        // Calculate daily rate
         const price = parseFloat(product.price.replace(/[^\d.]/g, ''));
         const dailyRate = Math.round(price * 0.1);
         document.getElementById('daily-rate').textContent = `₹${dailyRate}`;
         document.getElementById('rate-display').textContent = `₹${dailyRate}`;
     }
 
-    // Calculate rental details when dates change
+    // Calculate rental
     function calculateRental() {
         const startDate = new Date(document.getElementById('start-date').value);
         const endDate = new Date(document.getElementById('end-date').value);
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const dailyRate = parseInt(document.getElementById('daily-rate').textContent.replace('₹', ''));
             
             const rentalAmount = dailyRate * diffDays;
-            const totalAmount = rentalAmount + 1000 + 40; // Adding security deposit and delivery
+            const totalAmount = rentalAmount + 1000 + 40; 
 
             document.getElementById('duration').textContent = `${diffDays} days`;
             document.getElementById('days-display').textContent = diffDays;
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('start-date').addEventListener('change', calculateRental);
     document.getElementById('end-date').addEventListener('change', calculateRental);
 
-    // Payment method selection
+    // Payment method 
     document.querySelectorAll('.payment-method').forEach(method => {
         method.addEventListener('click', () => {
             document.querySelectorAll('.payment-method').forEach(m => 
@@ -50,18 +50,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form submission
     document.querySelector('.submit-btn').addEventListener('click', (e) => {
         e.preventDefault();
         
-        // Validate dates
         if (!document.getElementById('start-date').value || 
             !document.getElementById('end-date').value) {
             alert('Please select rental dates');
             return;
         }
 
-        // Basic form validation
+        // form validation
         const required = ['name', 'email', 'phone', 'address', 'city', 'state', 'pincode'];
         const invalid = required.filter(id => !document.getElementById(id).value);
         
@@ -75,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Show success message and redirect
+        // Show message
         alert('Rental confirmed! Thank you for choosing our service.');
         window.location.href = '/HTML Files/product.html';
     });

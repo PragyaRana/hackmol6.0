@@ -135,7 +135,7 @@ document.addEventListener('click', (e) => {
             category: productCard.dataset.category
         };
         
-        localStorage.setItem('kkvbuyproduct', JSON.stringify(product));
+        localStorage.setItem('buyNowProduct', JSON.stringify(product));
         window.location.href = 'kkv_buy_now_page.html';
     }
 });
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: productCard.querySelector('p').textContent,
                 category: productCard.dataset.category
             };
-            localStorage.setItem('kkvbuynowPageProduct', JSON.stringify(product));
+            localStorage.setItem('buyNowProduct', JSON.stringify(product));
             window.location.href = 'kkv_buy_now_Page';
         });
     });
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: productCard.querySelector('p').textContent,
                 category: productCard.dataset.category
             };
-            localStorage.setItem('kkvrentnowpageProduct', JSON.stringify(product));
+            localStorage.setItem('rentNowProduct', JSON.stringify(product));
             window.location.href = 'kkv_rent_now_page.html';
         });
     });
