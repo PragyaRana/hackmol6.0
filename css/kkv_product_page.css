@@ -24,7 +24,7 @@ a {
     padding: 20px;
 }
 
-/* Header and Navigation */
+/* Heade */
 .header {
     background: linear-gradient(135deg, #3CB815, #2EA30D);
     color: white;
@@ -44,12 +44,12 @@ a {
     color: white;
 }
 
-/* Add padding to main content to prevent it from hiding under fixed header */
+/* Add padding */
 main {
-    padding-top: 180px; /* Adjust this value based on your header height */
+    padding-top: 180px; 
 }
 
-/* Update search filter styles */
+/* Search filter */
 .search-filter {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -81,7 +81,7 @@ main {
     color: white;
 }
 
-/* Update nav button styles */
+/* Nav button */
 .nav-btn {
     display: inline-flex;
     align-items: center;
@@ -107,13 +107,13 @@ main {
     transform: translateY(0);
 }
 
-/* Add active state for current page */
+/* Active state */
 .nav-btn.active {
     background: linear-gradient(135deg, var(--secondary), #F65005);
     box-shadow: 0 4px 15px rgba(246, 80, 5, 0.3);
 }
 
-/* Buy button animation and styles */
+/* Buy button animation */
 .buy-now {
     background: linear-gradient(135deg, var(--secondary), #F65005);
     color: white;
@@ -150,18 +150,17 @@ main {
     transform: translateY(0);
 }
 
-/* Header Animation */
 .header {
 transition: all 0.3s ease;
 }
 
-/* Scrolled Header State */
+/* Scrolled Header*/
 .header.scrolled {
 background: var(--primary) !important;
 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Optional: Change text color when scrolled */
+/* Change text */
 .header.scrolled .brand-name,
 .header.scrolled .brand-fullform,
 .header.scrolled .nav-links a {
@@ -302,7 +301,7 @@ color: white !important;
     box-shadow: 0 4px 15px rgba(246, 80, 5, 0.2);
 }
 
-/* Responsive Navigation */
+/* Navigation */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
@@ -325,7 +324,6 @@ color: white !important;
         justify-content: center;
     }
 }
-/* Hamburger Menu */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -548,7 +546,7 @@ header {
     font-size: 0.9em;
 }
 
-/* Testimonial Section */
+/* Testimonial */
 .testimonial-section {
 background: linear-gradient(135deg, #d0ffd2, #f8f9fa);
 padding: 60px 0;
@@ -686,7 +684,7 @@ transform: scale(1);
 }
 }
 
-/* New Animations */
+/* Add more Animations */
 @keyframes rotate {
 from {
 transform: rotate(0deg);
@@ -739,7 +737,7 @@ transform: translateX(10px);
 }
 }
 
-/* Responsive Design */
+/* Design */
 @media (max-width: 768px) {
 .testimonial-carousel {
 flex-direction: column;
@@ -753,7 +751,7 @@ max-width: 400px;
 }
 
 
-/* Footer Styles */
+/* Footer */
 
 .footer {
     background: var(--dark);
@@ -798,7 +796,7 @@ max-width: 400px;
 .footer-item a:hover {
     color: var(--primary);
 }
-/* Quick Links Vertical Layout */
+/*Vertical Layout */
 .footer-item .btn-link {
 display: block; 
 margin-bottom: 10px; 
@@ -845,7 +843,7 @@ color: var(--primary);
     transform: translateY(-50%) scale(1.1);
 }
 
-/* License Section */
+/* License  */
 .license {
     background: rgba(0, 0, 0, 0.1);
     padding: 20px 0;
@@ -874,7 +872,7 @@ color: var(--primary);
     color: var(--primary);
 }
 
-/* Responsive Design */
+/*Design */
 @media (max-width: 768px) {
     .footer-grid {
         grid-template-columns: 1fr;
@@ -914,12 +912,12 @@ color: var(--primary);
     font-size: 1em;
 }
 
-/* Show rent button only for machinery category */
+/* Show rent button  */
 .product-card:not([data-category="machinery"]) .rent-now {
     display: none;
 }
 
-/* Add animation for button click */
+/* Add button*/
 .rent-now:active {
     transform: scale(0.95);
 }
