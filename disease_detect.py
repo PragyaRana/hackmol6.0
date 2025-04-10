@@ -1,9 +1,9 @@
 
-from fastapi import FastAPI, UploadFile, File
-from transformers import pipeline
-from PIL import Image
+from fastapi import FastAPI, UploadFile, File # create server and upload file handle file
+from transformers import pipeline # hugging face image classification pipeline is type of connection
+from PIL import Image #python image lib
 import io
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware #port number connection
 
 app = FastAPI()
 
