@@ -25,7 +25,7 @@
         // Validate credentials
         if (phoneInput === savedCredentials.phone && passwordInput === savedCredentials.password) {
           alert("Login successful!");
-          window.location.href = "secondpage.html"; // Redirect to the next page
+          window.location.href = "kkv_secondpage.html"; // Redirect to the next page
         } else {
           errorMessage.textContent = "Invalid mobile number or password.";
         }
