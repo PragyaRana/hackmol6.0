@@ -933,53 +933,59 @@ color: var(--primary);
     }
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
+/* Google Translate Widget Styling */
+#google_translate_element {
+    position: fixed;
+    bottom: 687px;
+    right: 430px;
+    z-index: 9999;
+    padding: 5px;
+    border-radius: 50px;
 }
 
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background: var(--dark);
-    margin: 5px 0;
-    transition: 0.4s;
+.goog-te-gadget {
+    font-family: Arial, sans-serif !important;
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
+.goog-te-gadget-simple {
+    background-color: #4CAF50 !important;
+    border: none !important;
+    padding: 12px !important;
+    border-radius: 40px !important;
+    color: white !important;
 }
 
-.chat-icon:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease;
+.goog-te-menu-value span {
+    color: white !important;
 }
 
-.dummy-chat {
-    animation: bounce 1s infinite;
+.goog-te-menu-value img {
+    display: none !important;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+.goog-te-gadget-icon {
+    display: none !important;
+}
+
+/* Language selector dropdown styling */
+.goog-te-menu-frame {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2) !important;
+    border-radius: 4px !important;
+}
+
+.goog-te-menu2 {
+    max-width: 200px !important;
+}
+
+.goog-te-menu2-item div, .goog-te-menu2-item-selected div {
+    padding: 8px 15px !important;
+}
+
+/* Hide Google branding */
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
 }
