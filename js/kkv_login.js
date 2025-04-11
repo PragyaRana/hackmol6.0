@@ -1,7 +1,7 @@
     // Saved credentials for demonstration
     const savedCredentials = {
         phone: '9651954404',
-        password: '12345678'
+        password: '1234'
       };
   
       // Add event listener to the form using the correct id "loginForm"
