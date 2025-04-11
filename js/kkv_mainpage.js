@@ -76,3 +76,30 @@ window.botpressWebChat = {
     },
     originalInit: window.botpressWebChat.init
 };
+
+// Function to change language and save preference
+function changeLanguage(lang) {
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+        
+        // Save language preference in cookie
+        document.cookie = `googtrans=/en/${lang}; path=/; expires=${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString()}`;
+    }
+}
+
+// Check for saved language preference on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const langCookie = document.cookie.split('; ').find(row => row.startsWith('googtrans='));
+    if (langCookie) {
+        const lang = langCookie.split('=')[1].split('/').pop();
+        setTimeout(() => {
+            const select = document.querySelector('.goog-te-combo');
+            if (select && select.value !== lang) {
+                select.value = lang;
+                select.dispatchEvent(new Event('change'));
+            }
+        }, 1000);
+    }
+});
