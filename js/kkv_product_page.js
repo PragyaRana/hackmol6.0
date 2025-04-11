@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: productCard.querySelector('p').textContent,
                 category: productCard.dataset.category
             };
-            localStorage.setItem('rentNowProduct', JSON.stringify(product));
+            localStorage.setItem('rentProduct', JSON.stringify(product));
             window.location.href = 'kkv_rent_now_page.html';
         });
     });
