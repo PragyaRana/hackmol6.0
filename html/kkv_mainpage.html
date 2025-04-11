@@ -10,14 +10,29 @@
     <!-- Favicon -->
     <link href="/Image/favicon.icon" rel="icon">
 
-
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-    <!-- Css ki file -->
     <link rel="stylesheet" href="/css/kkv_mainpage.css">
+    
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,pa,bn,mr,te',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 <body>
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element"></div>
+
     <!-- Header -->
     <header class="header" style="background-color: transparent;">
         <div class="container">
@@ -409,5 +424,6 @@
     <script src="https://files.bpcontent.cloud/2025/02/23/11/20250223111831-T552BM4Y.js"></script>
     
     <script src="/js/kkv_mainpage.js"></script>
+    
 </body>
 </html>
